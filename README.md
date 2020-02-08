@@ -6,5 +6,5 @@ Created for A18(B4).
 Hard dependency is 0-CreaturePackMechs - https://github.com/7D2D/A18Mods/
 as it links to the models and sounds from that mod.
 
-Uses the model for the miniBike for now because using the mech's own model will not allow it to be placed on the ground for some reason.
+Uses the model for the miniBike, for placing the mech, for now because using the mech's own model will not allow it to be placed on the ground for some reason.
 
