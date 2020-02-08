@@ -1,4 +1,4 @@
-# 7DtD-Placeable-Mech-Protector
+# 7DtD-Placeable-Mech-Protector (Does not work on dedicated server)
 A Mech Robot that you can craft and place to defend your base for 7 Days to Die. 
 
 Created for A18(B4). 
