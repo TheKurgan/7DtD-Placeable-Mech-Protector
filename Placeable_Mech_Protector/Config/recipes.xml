@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="mechProtectorPlaceable" count="1" craft_area="workbench" tags="perkAdvancedEngineering">
+			<ingredient name="resourceForgedSteel" count="13"/>
+			<ingredient name="resourceMechanicalParts" count="25"/>
+			<ingredient name="resourceScrapPolymers" count="20"/>
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+		</recipe>
+	</append>
+</configs>

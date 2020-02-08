@@ -1,0 +1,57 @@
+<configs>
+	<append xpath="/entity_classes" >
+		<entity_class name="mechProtector" extends="animalTemplateHostile">
+			<property name="Tags" value="entity,mech"/>
+			<property name="Mesh" value="#@modfolder(0-CreaturePackMechs):Resources/Robot.unity3d?Robot_X"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="IsEntityAnimal" value="false"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="RobotRig"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityZombieCop,0,EntityZombieCrawl,0,EntityZombieDog,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="Territorial"/>
+			<property name="AITask-3" value="ApproachSpot"/>
+			<property name="AITask-4" value="Leap"/> 
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="ApproachDistraction"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0,EntityZombieCop,0,0,EntityZombieCrawl,0,0,EntityZombieDog,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityZombieCop,EntityZombieCrawl,EntityZombieDog,EntityEnemyAnimal,EntityBandit"/>
+			<property name="AITarget-3" value="BlockingTargetTask"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SoundRandomTime" value="45.0"/>
+			<property name="SoundRandom" value="MechProtRandom" />
+			<property name="SoundAlert" value="MechProtAlert" />
+			<property name="SoundAttack" value="MechProtAttack" />
+			<property name="SoundDeath" value="MechProtDie" />
+			<property name="SoundHurt" value="MechProtRandom" />
+			<property name="SoundSense" value="MechProtSense" />
+			<property name="HasRagdoll" value="false"/>			
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="MaxViewAngle" value="315"/>
+			<property name="SightRange" value="90"/>
+			<property name="AttackTimeoutDay" value="1"/>
+			<property name="AttackTimeoutNight" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="HandItem" value="handProtMech"/>
+			<property name="DeadBodyHitPoints" value="300"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>
+	</append>
+</configs>
